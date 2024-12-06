@@ -9,9 +9,9 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # 1. Load the MovieLens Dataset
-movies = pd.read_csv("data/movies.csv")
+movies = pd.read_csv("movies.csv")
 
-tags = pd.read_csv('data/tags.csv')
+tags = pd.read_csv('tags.csv')
 
 # Aggregate tags for each movie
 tags_grouped = tags.groupby('movieId')['tag'].apply(
